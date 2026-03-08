@@ -22,7 +22,51 @@
     ></script>
   </head>
   <body>
-    <h2>Ready to build the Login page</h2>
+    <main
+      class="bg-gray-200 w-3/10 py-56 px-6 mx-auto border border-gray-200 mt-4"
+    >
+      <div class="flex justify-center mb-8">
+        <img src="./assets/Logo-full.png" alt="" />
+      </div>
+      <form id="form" class="px-5 py-6 bg-white rounded-2xl mb-6">
+        <!-- Input 1 -->
+        <div class="mb-5">
+          <label for="selected-bank" class="text-gray-800 text-lg font-bold"
+            >Mobile Number</label
+          >
+          <input
+            id="mobile-number"
+            type="number"
+            placeholder="Enter your number"
+            class="w-full bg-gray-200 px-4 py-3 rounded-xl mt-2 placeholder:text-lg"
+            required
+          />
+        </div>
+
+        <!-- Input 2 -->
+        <div>
+          <label for="selected-bank" class="text-gray-800 text-lg font-bold"
+            >4 Digit Pin</label
+          >
+          <input
+            id="pin"
+            type="password"
+            placeholder="Enter 4 digit pin"
+            maxlength="4"
+            class="w-full bg-gray-200 px-4 py-3 rounded-xl mt-2 placeholder:text-lg"
+            required
+          />
+        </div>
+
+        <!-- Login button -->
+        <button
+          id="login-btn"
+          class="w-full text-lg font-bold text-white bg-blue-800 hover:bg-blue-700 py-2 rounded-full mt-6 cursor-pointer"
+        >
+          Login
+        </button>
+      </form>
+    </main>
 
     <script src="./login-script.js"></script>
   </body>
