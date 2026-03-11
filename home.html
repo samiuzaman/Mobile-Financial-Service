@@ -116,7 +116,7 @@
       </section>
 
       <!-- Transaction History Section -->
-      
+
 
       <!-- Add Money section -->
       <section
@@ -201,7 +201,67 @@
       </section>
 
       <!-- Cash Out Section -->
-      
+      <section
+        id="cashout-section-section"
+        class="hidden px-5 py-4 bg-white rounded-2xl mb-6 mt-8 mx-5"
+      >
+        <div class="my-5">
+          <h4 class="text-2xl font-bold">Cash Out</h4>
+        </div>
+
+        <form id="form" class="bg-white rounded-2xl mb-6">
+          <!-- Input 1 -->
+          <div class="mb-5">
+            <label for="selected-bank" class="text-gray-800 text-lg font-bold"
+              >Agent Number</label
+            >
+            <input
+              id="agent-number"
+              type="number"
+              placeholder="Enter 11 digit number"
+              class="w-full bg-gray-200 px-4 py-3 rounded-xl mt-2 placeholder:text-lg"
+              required
+            />
+          </div>
+
+          <!-- Input 2 -->
+          <div class="mb-5">
+            <label for="selected-bank" class="text-gray-800 text-lg font-bold"
+              >Amount</label
+            >
+            <input
+              id="cashout-amount"
+              type="number"
+              placeholder="Enter amount to withdraw"
+              class="w-full bg-gray-200 px-4 py-3 rounded-xl mt-2 placeholder:text-lg"
+              required
+            />
+          </div>
+
+          <!-- Input 3 -->
+          <div>
+            <label for="selected-bank" class="text-gray-800 text-lg font-bold"
+              >4 Digit Pin</label
+            >
+            <input
+              id="cashout-pin"
+              type="password"
+              placeholder="Enter 4 digit pin number"
+              maxlength="4"
+              class="w-full bg-gray-200 px-4 py-3 rounded-xl mt-2 placeholder:text-lg"
+              required
+            />
+          </div>
+
+          <!-- Login button -->
+          <button
+            id="cash-out-btn"
+            class="w-full text-lg font-bold text-white bg-blue-800 hover:bg-blue-700 py-2 rounded-full mt-6 cursor-pointer"
+          >
+            Cash Out
+          </button>
+        </form>
+      </section>
 
       <!-- Transfer Money Section -->
       

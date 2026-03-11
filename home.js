@@ -106,4 +106,17 @@ document
     }
   });
 
-
+// Cash Out Functionality
+document.getElementById("cash-out-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+  let cashoutAmount = document.getElementById("cashout-amount").value;
+  cashoutAmount = parseFloat(cashoutAmount);
+  let cashoutPin = document.getElementById("cashout-pin").value;
+  cashoutPin = parseInt(cashoutPin);
+  if (cashoutPin === 1234) {
+    const currentBalance = mainBalance.innerText - cashoutAmount;
+    mainBalance.innerText = currentBalance;
+  } else {
+    alert("Invalid Pin"); 
+  }
+});
