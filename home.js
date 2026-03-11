@@ -87,10 +87,23 @@ document
   });
 
 // Select Ulitls Element
-
+const mainBalance = document.getElementById("main-balance");
 
 // Add Money Functionality
+document
+  .getElementById("add-money-btn")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    console.log(e.target.value);
+    const amount = document.getElementById("amount").value;
+    let pin = document.getElementById("pin").value;
+    pin = parseInt(pin);
+    if (pin === 1234) {
+      const newBalance = parseFloat(mainBalance.innerHTML) + parseFloat(amount);
+      mainBalance.innerText = newBalance;
+    } else {
+      alert("Invalid Pin");
+    }
+  });
 
-
-// Cash Out Functionality
 

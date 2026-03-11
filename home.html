@@ -116,42 +116,98 @@
       </section>
 
       <!-- Transaction History Section -->
-      <section id="transaction-history-section" class="hidden px-5 py-6">
-
-      </section>
+      
 
       <!-- Add Money section -->
       <section
         id="add-money-section"
         class="px-5 py-4 bg-white rounded-2xl mb-6 mt-8 mx-5"
       >
+        <div class="my-5">
+          <h4 class="text-2xl font-bold">Add Money</h4>
+        </div>
 
+        <form>
+          <!-- Input 1 -->
+          <div class="mb-5">
+            <label for="selected-bank" class="text-gray-800 text-lg font-bold"
+              >Select A Bank</label
+            >
+            <select
+              required
+              name="bank-list"
+              id="bank-list"
+              class="bg-gray-200 w-full px-4 py-3 rounded-xl text-lg text-gray-600 mt-2 focus:outline-none"
+            >
+              <option selected>Select Bank</option>
+              <option value="ibbl">IBBL</option>
+              <option value="mtb">MTB</option>
+              <option value="sbbl">SBBL</option>
+              <option value="abl">ABL</option>
+            </select>
+          </div>
+
+          <!-- Input 2 -->
+          <div class="mb-5">
+            <label for="selected-bank" class="text-gray-800 text-lg font-bold"
+              >Bank Account Number</label
+            >
+            <input
+              name="number"
+              type="number"
+              placeholder="Enter 11 digit account number"
+              required
+              class="w-full bg-gray-200 px-4 py-3 rounded-xl mt-2 placeholder:text-lg"
+            />
+          </div>
+
+          <!-- Input 3 -->
+          <div class="mb-5">
+            <label for="selected-bank" class="text-gray-800 text-lg font-bold"
+              >How Much Amount</label
+            >
+            <input
+              id="amount"
+              name="amount"
+              type="number"
+              placeholder="Add Amount to withdraw"
+              required
+              class="w-full bg-gray-200 px-4 py-3 rounded-xl mt-2 placeholder:text-lg"
+            />
+          </div>
+
+          <!-- Input 4 -->
+          <div>
+            <label for="selected-bank" class="text-gray-800 text-lg font-bold"
+              >Pin Number</label
+            >
+            <input
+              id="pin"
+              type="password"
+              placeholder="Enter 4 digit pin number"
+              maxlength="4"
+              required
+              class="w-full bg-gray-200 px-4 py-3 rounded-xl mt-2 placeholder:text-lg"
+            />
+          </div>
+          <!-- Add Money button -->
+          <input
+            type="submit"
+            value="Add Money"
+            id="add-money-btn"
+            class="w-full text-lg font-bold text-white bg-blue-800 hover:bg-blue-700 py-2 rounded-full mt-6 cursor-pointer mb-6"
+          />
+        </form>
       </section>
 
       <!-- Cash Out Section -->
-      <section
-        id="cashout-section-section"
-        class="hidden px-5 py-4 bg-white rounded-2xl mb-6 mt-8 mx-5"
-      >
-
-      </section>
+      
 
       <!-- Transfer Money Section -->
-      <section
-        id="transfer-money-section"
-        class="hidden px-5 py-4 bg-white rounded-2xl mb-6 mt-8 mx-5"
-      >
-
-      </section>
+      
 
       <!-- Get Bonus Section -->
-      <section
-        id="get-bonus-section"
-        class="hidden px-5 py-4 bg-white rounded-2xl mb-6 mt-8 mx-5"
-      >
-        
-        </form>
-      </section>
+      
     </main>
     <script src="./home.js"></script>
     <script src="./utils.js"></script>
