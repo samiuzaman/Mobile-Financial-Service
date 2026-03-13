@@ -116,7 +116,16 @@
       </section>
 
       <!-- Transaction History Section -->
+      <section id="transaction-history-section" class="hidden px-5 py-6">
+        <div class="flex justify-between items-center mb-5">
+          <h4 class="text-2xl font-bold">Transaction History</h4>
+          <span class="text-gray-600 cursor-pointer">View All</span>
+        </div>
 
+        <div id="transaction-container">
+
+        </div>
+      </section>
 
       <!-- Add Money section -->
       <section
@@ -136,14 +145,14 @@
             <select
               required
               name="bank-list"
-              id="bank-list"
+              id="select-bank"
               class="bg-gray-200 w-full px-4 py-3 rounded-xl text-lg text-gray-600 mt-2 focus:outline-none"
             >
               <option selected>Select Bank</option>
-              <option value="ibbl">IBBL</option>
-              <option value="mtb">MTB</option>
-              <option value="sbbl">SBBL</option>
-              <option value="abl">ABL</option>
+              <option value="IBBL">IBBL</option>
+              <option value="MTB">MTB</option>
+              <option value="SBBL">SBBL</option>
+              <option value="ABL">ABL</option>
             </select>
           </div>
 
@@ -153,6 +162,7 @@
               >Bank Account Number</label
             >
             <input
+            id="account-number"
               name="number"
               type="number"
               placeholder="Enter 11 digit account number"
@@ -264,12 +274,103 @@
       </section>
 
       <!-- Transfer Money Section -->
-      
+      <section
+        id="transfer-money-section"
+        class="hidden px-5 py-4 bg-white rounded-2xl mb-6 mt-8 mx-5"
+      >
+        <div class="my-5">
+          <h4 class="text-2xl font-bold">Transfer Money</h4>
+        </div>
+
+        <form id="form" class="bg-white rounded-2xl mb-6">
+          <!-- Input 1 -->
+          <div class="mb-5">
+            <label for="selected-bank" class="text-gray-800 text-lg font-bold"
+              >Agent Number</label
+            >
+            <input
+              id="transfer-number"
+              type="number"
+              placeholder="Enter 11 digit number"
+              class="w-full bg-gray-200 px-4 py-3 rounded-xl mt-2 placeholder:text-lg"
+              required
+            />
+          </div>
+
+          <!-- Input 2 -->
+          <div class="mb-5">
+            <label for="selected-bank" class="text-gray-800 text-lg font-bold"
+              >Amount</label
+            >
+            <input
+              id="transfer-amount"
+              type="number"
+              placeholder="Enter amount to transfer"
+              class="w-full bg-gray-200 px-4 py-3 rounded-xl mt-2 placeholder:text-lg"
+              required
+            />
+          </div>
+
+          <!-- Input 3 -->
+          <div>
+            <label for="selected-bank" class="text-gray-800 text-lg font-bold"
+              >4 Digit Pin</label
+            >
+            <input
+              id="transfer-pin"
+              type="password"
+              placeholder="Enter 4 digit pin number"
+              maxlength="4"
+              class="w-full bg-gray-200 px-4 py-3 rounded-xl mt-2 placeholder:text-lg"
+              required
+            />
+          </div>
+
+          <!-- Send button -->
+          <button
+            id="send-btn"
+            class="w-full text-lg font-bold text-white bg-blue-800 hover:bg-blue-700 py-2 rounded-full mt-6 cursor-pointer"
+          >
+            Send Now
+          </button>
+        </form>
+      </section>
 
       <!-- Get Bonus Section -->
-      
+      <section
+        id="get-bonus-section"
+        class="hidden px-5 py-4 bg-white rounded-2xl mb-6 mt-8 mx-5"
+      >
+        <div class="my-5">
+          <h4 class="text-2xl font-bold">Get Bonus</h4>
+        </div>
+
+        <form id="form" class="bg-white rounded-2xl mb-6">
+          <!-- Input 1 -->
+          <div>
+            <label for="selected-bank" class="text-gray-800 text-lg font-bold"
+              >Enter Bonus Coupon</label
+            >
+            <input
+              id="bonus-coupon"
+              type="number"
+              placeholder="Enter your coupon"
+              class="w-full bg-gray-200 px-4 py-3 rounded-xl mt-2 placeholder:text-lg"
+              required
+            />
+          </div>
+
+          <!-- Get Bonus button -->
+          <button
+            id="send-btn"
+            class="w-full text-lg font-bold text-white bg-blue-800 hover:bg-blue-700 py-2 rounded-full mt-6 cursor-pointer"
+          >
+            Get Bonus
+          </button>
+        </form>
+      </section>
     </main>
-    <script src="./home.js"></script>
-    <script src="./utils.js"></script>
+    <script src="./js/uitlities.js"></script>
+    <script src="./js/home.js"></script>
   </body>
 </html>
